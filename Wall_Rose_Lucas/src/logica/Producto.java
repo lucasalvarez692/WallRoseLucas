@@ -42,4 +42,14 @@ public class Producto {
     public String toString() {
         return codigo + " - " + nombre + " - ₡" + precio;
     }
+
+	public void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setPrecio(double precio2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

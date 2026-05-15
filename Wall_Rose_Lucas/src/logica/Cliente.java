@@ -28,4 +28,14 @@ public class Cliente {
     public String toString() {
         return id + " - " + nombre;
     }
+
+	public void setNombre(String nombre2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setEmail(String email2) {
+		// TODO Auto-generated method stub
+		
+	}
 }

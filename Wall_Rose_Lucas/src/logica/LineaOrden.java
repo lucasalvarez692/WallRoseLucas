@@ -21,4 +21,15 @@ public class LineaOrden {
     public double calcularSubtotal() {
         return producto.getPrecio() * cantidad;
     }
+
+	public void setProducto(Producto producto2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void setCantidad(double cantidad2) {
+		// TODO Auto-generated method stub
+		
+	}
+    
 }
