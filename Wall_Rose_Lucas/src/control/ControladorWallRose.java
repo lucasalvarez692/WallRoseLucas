@@ -1,3 +1,4 @@
+// control/ControladorWallRose.java
 package control;
 
 import java.util.ArrayList;
@@ -23,6 +24,37 @@ public class ControladorWallRose {
         productos = new ArrayList<>();
         clientes = new ArrayList<>();
         ordenes = new ArrayList<>();
+        cargarDatosPredeterminados();
+    }
+    
+    private void cargarDatosPredeterminados() {
+        clientes.add(new Cliente("CLI001", "Lucas", "lucas@gmail.com"));
+        clientes.add(new Cliente("CLI002", "Kristel", "kristel@gmail.com"));
+        clientes.add(new Cliente("CLI003", "Johan", "johan@gmail.com"));
+        
+        // Coca-Cola (Botella de 2 Litros) - ₡1.600
+        productos.add(new Producto(consecutivoProducto++, "Coca-Cola (2L)", 1600, 50));
+        
+        // Frijoles negros o rojos (Bolsa de 800g) - ₡1.300 (promedio)
+        productos.add(new Producto(consecutivoProducto++, "Frijoles (Bolsa 800g)", 1300, 30));
+        
+        // Café molido tradicional (Paquete de 250g) - ₡1.650 (promedio)
+        productos.add(new Producto(consecutivoProducto++, "Café molido (250g)", 1650, 25));
+        
+        // Leche Dos Pinos Semidescremada (1L) - ₡950
+        productos.add(new Producto(consecutivoProducto++, "Leche Dos Pinos (1L)", 950, 40));
+        
+        // Huevos (Cartón de 30 unidades, tamaño L) - ₡3.500 (promedio)
+        productos.add(new Producto(consecutivoProducto++, "Huevos (Cartón 30u - Tamaño L)", 3500, 20));
+        
+        // Atún enlatado (Lata de 140g) - ₡1.250 (promedio)
+        productos.add(new Producto(consecutivoProducto++, "Atún enlatado (140g)", 1250, 60));
+        
+        // Productos adicionales para variedad
+        productos.add(new Producto(consecutivoProducto++, "Arroz (Bolsa 1kg)", 1100, 45));
+        productos.add(new Producto(consecutivoProducto++, "Aceite de cocina (1L)", 1800, 25));
+        productos.add(new Producto(consecutivoProducto++, "Pan Bimbo (400g)", 1200, 35));
+        productos.add(new Producto(consecutivoProducto++, "Jabón de baño", 800, 50));
     }
     
     public static ControladorWallRose getInstance() {

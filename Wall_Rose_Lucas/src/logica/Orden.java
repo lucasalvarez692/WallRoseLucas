@@ -2,15 +2,13 @@ package logica;
 
 import java.util.ArrayList;
 import java.util.List;
-import logica.EstadoOrden;
 
 public class Orden {
 
     private int numero;
     private Cliente cliente;
     private List<LineaOrden> lineas;
-	@SuppressWarnings("unused")
-	private EstadoOrden estado;
+    private EstadoOrden estado;
 
     public Orden(int numero, Cliente cliente) {
         this.numero = numero;
@@ -37,11 +35,9 @@ public class Orden {
 
     public double calcularTotal() {
         double total = 0;
-
         for (LineaOrden linea : lineas) {
             total += linea.calcularSubtotal();
         }
-
         return total;
     }
 
@@ -49,19 +45,12 @@ public class Orden {
         return lineas;
     }
 
-	public void agregarProducto(Producto producto, int cantidad) {
-		// TODO Auto-generated method stub
-		
-	}
+    public void agregarProducto(Producto producto, double cantidad) {
+        LineaOrden nuevaLinea = new LineaOrden(producto, cantidad);
+        lineas.add(nuevaLinea);
+    }
 
-	public EstadoOrden getEstado() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public void agregarProducto(Producto producto, double cantidad) {
-		// TODO Auto-generated method stub
-		
-	}
-	
+    public EstadoOrden getEstado() {
+        return estado;
+    }
 }
